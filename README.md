@@ -1,5 +1,7 @@
 # AVAssetWriter leaks segment data when used in Swift
 
+_**Make sure to [read my article](https://nonstrict.eu/blog/2023/avassetwriter-leaks-segment-data/) on AVAssetWriter leaking segment data before exploring this sample project.**_
+
 Minimal sample to demonstrate memory is leaked when the `AVAssetWriterDelegate` is implemented in Swift.
 
 All macOS versions since 11 are affected, until Apple fixed it in macOS 13.3 and newer.
