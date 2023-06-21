@@ -11,6 +11,9 @@
 		D5B4261D2A42DB8B0081FA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4261C2A42DB8B0081FA48 /* ContentView.swift */; };
 		D5B4261F2A42DB8C0081FA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B4261E2A42DB8C0081FA48 /* Assets.xcassets */; };
 		D5B426222A42DB8C0081FA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B426212A42DB8C0081FA48 /* Preview Assets.xcassets */; };
+		D5B4262B2A42DBD60081FA48 /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4262A2A42DBD60081FA48 /* Writer.swift */; };
+		D5B4262C2A42DBD60081FA48 /* SampleBufferSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B426292A42DBD60081FA48 /* SampleBufferSource.swift */; };
+		D5B426302A42E7960081FA48 /* ObjCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B4262F2A42E7960081FA48 /* ObjCDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,11 @@
 		D5B4261E2A42DB8C0081FA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5B426212A42DB8C0081FA48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5B426232A42DB8C0081FA48 /* avassetwriter_segment_leak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = avassetwriter_segment_leak.entitlements; sourceTree = "<group>"; };
+		D5B426292A42DBD60081FA48 /* SampleBufferSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferSource.swift; sourceTree = "<group>"; };
+		D5B4262A2A42DBD60081FA48 /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
+		D5B4262D2A42E7960081FA48 /* avassetwriter-segment-leak-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avassetwriter-segment-leak-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5B4262E2A42E7960081FA48 /* ObjCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCDelegate.h; sourceTree = "<group>"; };
+		D5B4262F2A42E7960081FA48 /* ObjCDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,13 @@
 			children = (
 				D5B4261A2A42DB8B0081FA48 /* avassetwriter_segment_leakApp.swift */,
 				D5B4261C2A42DB8B0081FA48 /* ContentView.swift */,
+				D5B4262A2A42DBD60081FA48 /* Writer.swift */,
+				D5B4262E2A42E7960081FA48 /* ObjCDelegate.h */,
+				D5B4262F2A42E7960081FA48 /* ObjCDelegate.m */,
+				D5B426292A42DBD60081FA48 /* SampleBufferSource.swift */,
 				D5B4261E2A42DB8C0081FA48 /* Assets.xcassets */,
 				D5B426232A42DB8C0081FA48 /* avassetwriter_segment_leak.entitlements */,
+				D5B4262D2A42E7960081FA48 /* avassetwriter-segment-leak-Bridging-Header.h */,
 				D5B426202A42DB8C0081FA48 /* Preview Content */,
 			);
 			path = "avassetwriter-segment-leak";
@@ -101,6 +114,7 @@
 				TargetAttributes = {
 					D5B426162A42DB8B0081FA48 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -139,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B4262C2A42DBD60081FA48 /* SampleBufferSource.swift in Sources */,
 				D5B4261D2A42DB8B0081FA48 /* ContentView.swift in Sources */,
+				D5B4262B2A42DBD60081FA48 /* Writer.swift in Sources */,
+				D5B426302A42E7960081FA48 /* ObjCDelegate.m in Sources */,
 				D5B4261B2A42DB8B0081FA48 /* avassetwriter_segment_leakApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -265,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "avassetwriter-segment-leak/avassetwriter_segment_leak.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -279,10 +297,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nonstrict.avassetwriter-segment-leak";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "avassetwriter-segment-leak/avassetwriter-segment-leak-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "avassetwriter-segment-leak/avassetwriter_segment_leak.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -306,10 +328,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nonstrict.avassetwriter-segment-leak";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "avassetwriter-segment-leak/avassetwriter-segment-leak-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
